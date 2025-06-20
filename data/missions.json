@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Köyde Kaybolan Kedi",
+        "description": "Yaşlı bir kadının kedisi kayboldu. Onu bul ve sahibine geri götür.",
+        "rank": "D",
+        "exp_reward": 50
+    },
+    {
+        "id": 2,
+        "title": "Köy Sınırında Devriye",
+        "description": "Köy dışındaki bölgede şüpheli aktiviteler rapor edildi. Bölgeyi kontrol et.",
+        "rank": "C",
+        "exp_reward": 120
+    },
+    {
+        "id": 3,
+        "title": "Kaçak Ninja Takibi",
+        "description": "Köye sızan bir kaçak ninja tespit edildi. İzini sür ve yakala.",
+        "rank": "B",
+        "exp_reward": 300
+    },
+    {
+        "id": 4,
+        "title": "Savaş Hazırlığı",
+        "description": "Yaklaşan bir saldırıya karşı köy savunması için gerekli malzemeleri topla.",
+        "rank": "A",
+        "exp_reward": 650
+    },
+    {
+        "id": 5,
+        "title": "ANBU: Sabotaj Görevi",
+        "description": "Düşman üssüne sız ve mühimmatlarını sabote et. Yüksek risk içerir.",
+        "rank": "S",
+        "exp_reward": 1200
+    }
+]

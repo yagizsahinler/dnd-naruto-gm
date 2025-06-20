@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Katon: Hōsenka",
+        "jutsu_type": "Ninjutsu",
+        "cp_cost": 4,
+        "damage_dice": "1d8",
+        "description": "Alev toplarıyla düşmana saldırır."
+    },
+    {
+        "name": "Substitution Jutsu",
+        "jutsu_type": "Temel",
+        "cp_cost": 3,
+        "damage_dice": "0d0",
+        "description": "Gelen saldırıyı savuşturmak için kullanılır."
+    },
+    {
+        "name": "Bunshin no Jutsu",
+        "jutsu_type": "Temel",
+        "cp_cost": 2,
+        "damage_dice": "0d0",
+        "description": "Kendinizin sahte bir kopyasını yaratırsınız."
+    }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "forest_clearing",
+    "name": "Ormanın Açık Alanı",
+    "description": "Yoğun yaprakların arasından gelen güneş ışıkları yerde bir mozaik gibi dans ediyor. Hafif bir rüzgar, ağaçların yapraklarını usulca sallıyor. Sessizlik, uzaklardan gelen kuş cıvıltılarıyla bölünüyor. Burası, kısa bir dinlenme için oldukça güvenli bir yer gibi görünüyor."
+  },
+  {
+    "id": "uchiha_shrine",
+    "name": "Uchiha Tapınağı",
+    "description": "Antik taş sütunlarla çevrili bu tapınak, zamanın yıpratıcı etkilerine rağmen görkemini koruyor. İçerideki hava soğuk ve ağır; Sharingan efsanelerini anlatan duvar oymaları dikkat çekici. Burada geçmişin izleri adeta fısıltı gibi yankılanıyor."
+  },
+  {
+    "id": "training_ground",
+    "name": "Antrenman Sahası",
+    "description": "Toprak zeminin üzerine kazınmış eski jutsu sembolleri hala seçilebiliyor. Bazı bölgelerde patlamış kütükler ve is kalıntıları, burada yapılan yoğun antrenmanları anlatıyor. Hafif bir chakra izi hala havada asılı gibi."
+  },
+  {
+    "id": "enemy_camp",
+    "name": "Düşman Üssü Yakını",
+    "description": "Çalılıkların arasından ilerlediğinde hafif duman kokusu alıyorsun. İleriye doğru bakıldığında birkaç çadır, nöbet tutan ninja siluetleriyle birlikte görünüyor. Ortam gergin, dikkatli olmazsan hemen fark edilebilirsin."
+  }
+]
