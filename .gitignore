@@ -1,0 +1,56 @@
+# Python bytecode ve önbellek
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# IDE/editor ayarları
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Çevresel dosyalar
+.env
+*.env
+
+# MacOS ve sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Kayıt ve çıktı dosyaları
+*.log
+*.tmp
+*.bak
+
+# Ollama çalışma dosyaları
+ollama.db
+ollama-models/
+ollama-output/
+
+# Sahne çıktıları
+scenes/
+generated_scenes/
+
+# JSON dosyası yedekleri
+*.json.bak
+*.json~
+
+# Test çıktıları
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+pytest_cache/
+
+# Pipenv / poetry
+Pipfile.lock
+poetry.lock
+
+# Jupyter (eğer ileride kullanırsan)
+.ipynb_checkpoints/
+
+# Kişisel notlar / markdown / geçici dosyalar
+*.md~
+*.txt~
