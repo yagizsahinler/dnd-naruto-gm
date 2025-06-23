@@ -48,7 +48,7 @@ class Character:
 
     def level_up(self) -> None:
         self.level += 1
-        self.jp += 1  # 🆕 Seviye başına 1 JP
+        self.jp += 1
         self.hp = self.calculate_hp()
         self.cp = self.calculate_cp()
         print(f"🎉 {self.name} seviye atladı! Yeni seviye: {self.level} | Yeni JP: {self.jp}")
@@ -64,9 +64,42 @@ class Character:
         self.cp = self.calculate_cp()
 
     def learn_jutsu(self, jutsu_name: str, cost: int = 1) -> bool:
-        """JP harcayarak jutsu öğrenme"""
         if self.jp >= cost and jutsu_name not in self.learned_jutsus:
             self.jp -= cost
             self.learned_jutsus.append(jutsu_name)
             return True
         return False
+
+    def to_dict(self) -> dict:
+        return {
+            "name": self.name,
+            "rank": self.rank,
+            "clan": self.clan,
+            "element": self.element,
+            "level": self.level,
+            "exp": self.exp,
+            "jp": self.jp,
+            "stats": self.stats,
+            "learned_jutsus": self.learned_jutsus
+        }
+
+    @staticmethod
+    def from_dict(data: dict) -> "Character":
+        return Character(
+            name=data["name"],
+            rank=data["rank"],
+            clan=data["clan"],
+            element=data["element"],
+            level=data.get("level", 1),
+            exp=data.get("exp", 0),
+            jp=data.get("jp", 0),
+            stats=data.get("stats", {
+                "STR": 10,
+                "DEX": 10,
+                "CON": 10,
+                "INT": 10,
+                "WIS": 10,
+                "CHA": 10
+            }),
+            learned_jutsus=data.get("learned_jutsus", [])
+        )

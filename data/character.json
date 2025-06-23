@@ -1,0 +1,18 @@
+{
+    "name": "thydrix",
+    "rank": "Genin",
+    "clan": "Nara",
+    "element": "Fire",
+    "level": 1,
+    "exp": 0,
+    "jp": 0,
+    "stats": {
+        "STR": 12,
+        "DEX": 12,
+        "CON": 12,
+        "INT": 12,
+        "WIS": 12,
+        "CHA": 12
+    },
+    "learned_jutsus": []
+}

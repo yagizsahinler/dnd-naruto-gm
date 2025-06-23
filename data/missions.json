@@ -1,37 +1,29 @@
 [
-    {
-        "id": 1,
-        "title": "Köyde Kaybolan Kedi",
-        "description": "Yaşlı bir kadının kedisi kayboldu. Onu bul ve sahibine geri götür.",
-        "rank": "D",
-        "exp_reward": 50
-    },
-    {
-        "id": 2,
-        "title": "Köy Sınırında Devriye",
-        "description": "Köy dışındaki bölgede şüpheli aktiviteler rapor edildi. Bölgeyi kontrol et.",
-        "rank": "C",
-        "exp_reward": 120
-    },
-    {
-        "id": 3,
-        "title": "Kaçak Ninja Takibi",
-        "description": "Köye sızan bir kaçak ninja tespit edildi. İzini sür ve yakala.",
-        "rank": "B",
-        "exp_reward": 300
-    },
-    {
-        "id": 4,
-        "title": "Savaş Hazırlığı",
-        "description": "Yaklaşan bir saldırıya karşı köy savunması için gerekli malzemeleri topla.",
-        "rank": "A",
-        "exp_reward": 650
-    },
-    {
-        "id": 5,
-        "title": "ANBU: Sabotaj Görevi",
-        "description": "Düşman üssüne sız ve mühimmatlarını sabote et. Yüksek risk içerir.",
-        "rank": "S",
-        "exp_reward": 1200
-    }
+  {
+    "id": 1,
+    "title": "Lost Medic-Nin",
+    "location": "Hidden Leaf Forest",
+    "description": "Locate and retrieve a missing medic-nin who disappeared during a supply run.",
+    "rank": "C",
+    "exp_reward": 100,
+    "previous_context": "Ren recently survived a bandit ambush."
+  },
+  {
+    "id": 2,
+    "title": "Shrine Investigation",
+    "location": "Abandoned Shrine",
+    "description": "Investigate reports of forbidden jutsu activity in the ruins.",
+    "rank": "B",
+    "exp_reward": 200,
+    "previous_context": "A strange black feather was found near the shrine's door."
+  },
+  {
+    "id": 3,
+    "title": "Supply Escort",
+    "location": "Mountain Pass",
+    "description": "Escort a convoy delivering supplies to a remote medical camp.",
+    "rank": "C",
+    "exp_reward": 150,
+    "previous_context": "Heavy fog has made the route especially dangerous."
+  }
 ]

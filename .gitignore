@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python bytecode ve önbellek
 __pycache__/
 *.py[cod]
@@ -54,3 +55,14 @@ poetry.lock
 # Kişisel notlar / markdown / geçici dosyalar
 *.md~
 *.txt~
+=======
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.env/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+>>>>>>> f0dd651965637c66af9baff81f9e92679d56c5bc

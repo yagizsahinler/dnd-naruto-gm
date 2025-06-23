@@ -46,18 +46,29 @@ def rest_menu(character):
 
 
 if __name__ == "__main__":
-    # Karakteri yükle veya oluştur
+    print("🔰 Naruto D&D CLI başlatılıyor...")
+
+    # 1. Karakteri yükle veya oluştur
     character = CharacterFileRepository.load_character()
     if not character:
+        print("⚠️ Kayıtlı karakter bulunamadı. Yeni karakter oluşturuluyor...")
         character = None
         while character is None:
             character = prompt_for_character()
         CharacterFileRepository.save_character(character)
 
-    # Jutsu ve görevleri yükle
+    # 2. Jutsuları ve görevleri yükle
     all_jutsus = CharacterFileRepository.load_jutsus()
-    mission_list = CharacterFileRepository.load_missions()
+    if not all_jutsus:
+        print("⚠️ Jutsu verisi eksik veya bulunamadı. Lütfen 'data/jutsus.json' dosyasını kontrol edin.")
+        exit(1)
 
+    mission_list = CharacterFileRepository.load_missions()
+    if not mission_list:
+        print("⚠️ Görev listesi eksik. Lütfen 'data/missions.json' dosyasını doldurun.")
+        exit(1)
+
+    # 3. Ana menü döngüsü
     while True:
         print(f"\n👤 {character.name} | Seviye: {character.level} | CP: {character.cp} | EXP: {character.exp} | JP: {character.jp}")
         print("\n🔹 Ne yapmak istiyorsun?")
@@ -65,7 +76,7 @@ if __name__ == "__main__":
         print("2. Görev Tamamla")
         print("3. Dinlen")
         print("4. Jutsu Öğren")
-        print("5. Ortamı İncele")
+        print("5. Ortamı İncele (Sahne)")
         print("0. Çıkış")
 
         choice = input("Seçimin: ").strip()

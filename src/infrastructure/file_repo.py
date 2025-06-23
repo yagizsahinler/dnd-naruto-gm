@@ -7,7 +7,6 @@ from domain.mission import Mission
 
 
 class CharacterFileRepository:
-
     DATA_DIR = "data"
     CHARACTER_FILE = os.path.join(DATA_DIR, "character.json")
 
@@ -21,7 +20,7 @@ class CharacterFileRepository:
             "element": character.element,
             "level": character.level,
             "exp": character.exp,
-            "jp": character.jp,  # 🆕 JP kaydı
+            "jp": character.jp,
             "stats": character.stats,
             "learned_jutsus": character.learned_jutsus
         }
@@ -39,21 +38,19 @@ class CharacterFileRepository:
             data = json.load(f)
 
         try:
-            character = Character(
+            return Character(
                 name=data["name"],
                 rank=data["rank"],
                 clan=data["clan"],
                 element=data["element"],
                 level=data.get("level", 1),
                 exp=data.get("exp", 0),
-                jp=data.get("jp", 0),  # 🆕 JP yüklemesi
+                jp=data.get("jp", 0),
                 stats=data["stats"],
                 learned_jutsus=data.get("learned_jutsus", [])
             )
-            print(f"📂 Karakter yüklendi: {character.name} (Seviye {character.level})")
-            return character
         except KeyError as e:
-            print(f"🚫 Hatalı veri formatı: {e}")
+            print(f"🚫 Hatalı karakter verisi: {e}")
             return None
 
     @staticmethod
@@ -68,15 +65,14 @@ class CharacterFileRepository:
         jutsus = []
         for entry in data:
             try:
-                jutsu = Jutsu(
+                jutsus.append(Jutsu(
                     name=entry["name"],
                     jutsu_type=entry["jutsu_type"],
                     cp_cost=entry["cp_cost"],
                     damage_dice=entry["damage_dice"],
                     description=entry.get("description", ""),
                     uses=entry.get("uses", 0)
-                )
-                jutsus.append(jutsu)
+                ))
             except KeyError as e:
                 print(f"🚫 Hatalı jutsu verisi: {e}")
         return jutsus
@@ -93,15 +89,15 @@ class CharacterFileRepository:
         missions = []
         for entry in data:
             try:
-                mission = Mission(
+                missions.append(Mission(
                     id=entry["id"],
                     title=entry["title"],
                     description=entry["description"],
+                    location=entry["location"],  # ✅ Eksik olan alan eklendi
                     rank=entry["rank"],
                     exp_reward=entry["exp_reward"],
                     is_completed=entry.get("is_completed", False)
-                )
-                missions.append(mission)
+                ))
             except KeyError as e:
                 print(f"🚫 Hatalı görev verisi: {e}")
         return missions
